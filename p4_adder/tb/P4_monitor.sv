@@ -30,11 +30,17 @@ class P4_monitor extends uvm_monitor;
 
         forever begin
             trans = p4_adder_seq_item::type_id::create("trans");
-            //save the values from the dut
+            //save the values from the dut in the sequence item
             trans.a=pif.a;
             trans.b=pif.b;
             trans.cin=pif.cin;
             trans.s=pif.s;
             trans.cout=pif.cout;
+            //send the saved data through the analysis port
+            ap.write(trans);
+        end
+     endtask
+
+     
 
             
