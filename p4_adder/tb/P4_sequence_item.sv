@@ -9,9 +9,15 @@ class p4_adder_seq_item extends uvm_sequence_item;
     rand logic [nbit-1:0] a;
     rand logic [nbit-1:0] b;
     rand logic cin;
+    
+    //outputs to be collected
+    logic [nbit-1:0] s;
+    logic cout;
+
+
 
     // Constructor
-    function new(string name = "P4_sequence_item");
+    function new(string name = "P4_sequence_item"   );
         super.new(name);
     endfunction
 
