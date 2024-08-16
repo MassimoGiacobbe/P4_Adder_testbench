@@ -1,5 +1,4 @@
 `include "P4_agent.sv"
-`include "uvm.svh"
 import uvm_pkg::*;
 
 class P4_env extends uvm_env;
