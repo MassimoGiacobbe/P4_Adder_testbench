@@ -1,16 +1,18 @@
+
+import uvm_pkg::*;
 `include "P4_sequencer.sv"
 `include "P4_driver.sv"
 `include "P4_monitor.sv"
-import uvm_pkg::*;
+
 
 
 class p4_adder_agent extends uvm_agent;
     `uvm_component_utils(p4_adder_agent)
 
     // Declare  the agent's components
-    p4_adder_sequencer seqr;
-    p4_adder_driver drv;
-    p4_adder_monitor mon;
+    p4_sequencer seqr;
+    p4_driver drv;
+    p4_monitor mon;
 
     // Agent mode
     bit is_active;
@@ -29,11 +31,11 @@ class p4_adder_agent extends uvm_agent;
 
         // Instantiate components based on the agent's mode
         if (is_active) begin
-            seqr = p4_adder_sequencer::type_id::create("seqr", this);
-            drv = p4_adder_driver::type_id::create("drv", this);
+            seqr = p4_sequencer::type_id::create("seqr", this);
+            drv = p4_driver::type_id::create("drv", this);
         end
 
-        mon = p4_adder_monitor::type_id::create("mon", this);
+        mon = p4_monitor::type_id::create("mon", this);
     endfunction
 
     // Connect phase

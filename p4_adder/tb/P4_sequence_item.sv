@@ -2,10 +2,10 @@
 import uvm_pkg::*;
 import p4_adder_pkg::*; // Importing package for nbit
 `include "uvm_macros.svh"
-//`include "uvm.svh"
 
-class p4_adder_seq_item extends uvm_sequence_item;
-    `uvm_object_utils(p4_adder_seq_item)
+
+class p4_sequence_item extends uvm_sequence_item;
+    `uvm_object_utils(p4_sequence_item)
 
     // Random variables
     rand logic [nbit-1:0] a;

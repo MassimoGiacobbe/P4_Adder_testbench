@@ -1,7 +1,7 @@
 
 `include "P4_sequence_item.sv"
 import uvm_pkg::*;
-import p4_adder_pkg::*; // Importing package for nTrans
+//import p4_adder_pkg::*; // Importing package for nTrans
 
 class p4_adder_sequence extends uvm_sequence #(p4_adder_seq_item);
 
@@ -15,13 +15,13 @@ class p4_adder_sequence extends uvm_sequence #(p4_adder_seq_item);
     virtual task body();
 
         // Declare the sequence item
-        p4_adder_seq_item seq_item;
+        p4_sequence_item seq_item;
 
         //  Generate a configurable number of transactions
         for (int i = 0; i < nTrans; i++) begin  
             
             // Create a new sequence item
-            seq_item = p4_adder_seq_item::type_id::create("seq_item");
+            seq_item = p4_sequence_item::type_id::create("seq_item");
 
             // Randomize the sequence item with constraints applied
             if (!seq_item.randomize()) begin
