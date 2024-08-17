@@ -1,4 +1,5 @@
 //sequencer class, should arbitrate beetwen sequence and driver
+`include "P4_sequence.sv"
 import uvm_pkg::*;
 
 class P4_sequencer extends uvm_sequencer #(p4_adder_seq_item); 

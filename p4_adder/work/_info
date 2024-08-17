@@ -1,0 +1,144 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/socv-2425-9/Desktop/p4-adder/p4_adder
+Yp4_adder_if
+Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z2 DXx4 work 12 p4_adder_pkg 0 22 9Ga;OhBNYh[]Og>UPRRK;3
+DXx4 work 20 P4_interface_sv_unit 0 22 EO5Z]SdK4FaRcTI2B79zE0
+Z3 !s110 1723889896
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 _Oz3_h;@fAYnll=:R>=2>3
+ILf@d_AhlEQX8fi7YcB`MS1
+!s105 P4_interface_sv_unit
+S1
+R0
+Z5 w1723889134
+Z6 8/home/socv-2425-9/Desktop/p4-adder/p4_adder/tb/P4_interface.sv
+Z7 F/home/socv-2425-9/Desktop/p4-adder/p4_adder/tb/P4_interface.sv
+!i122 2
+L0 5 0
+Z8 OL;L;2020.4;71
+31
+Z9 !s108 1723889895.000000
+!s107 /home/socv-2425-9/Desktop/p4-adder/p4_adder/tb/P4_interface.sv|
+Z10 !s90 -reportprogress|300|-work|work|/home/socv-2425-9/Desktop/p4-adder/p4_adder/tb/P4_interface.sv|
+!i113 0
+Z11 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 tCvgOpt 0
+Xp4_adder_pkg
+R1
+!s110 1723889890
+!i10b 1
+!s100 F]93S`T?f<0V;]GQV?`C00
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+I9Ga;OhBNYh[]Og>UPRRK;3
+S1
+R0
+R5
+8/home/socv-2425-9/Desktop/p4-adder/p4_adder/tb/P4_pkg.sv
+F/home/socv-2425-9/Desktop/p4-adder/p4_adder/tb/P4_pkg.sv
+!i122 0
+Z13 L0 3 0
+V9Ga;OhBNYh[]Og>UPRRK;3
+R8
+r1
+!s85 0
+31
+!s108 1723889889.000000
+!s107 /home/socv-2425-9/Desktop/p4-adder/p4_adder/tb/P4_pkg.sv|
+!s90 -reportprogress|300|-work|work|/home/socv-2425-9/Desktop/p4-adder/p4_adder/tb/P4_pkg.sv|
+!i113 0
+R11
+R12
+vp4_adder_wrapper
+R1
+R2
+DXx4 work 15 P4_wrap_sv_unit 0 22 UbI1zS>lh7>>ce0_f:]KZ2
+Z14 !s110 1723889892
+R4
+r1
+!s85 0
+!i10b 1
+!s100 9A^?KdYmoNNb?2VJm1U2J1
+I<:5@z51CZVIzKmF?@@1Zl3
+!s105 P4_wrap_sv_unit
+S1
+R0
+R5
+Z15 8/home/socv-2425-9/Desktop/p4-adder/p4_adder/tb/P4_wrap.sv
+Z16 F/home/socv-2425-9/Desktop/p4-adder/p4_adder/tb/P4_wrap.sv
+!i122 1
+L0 6 21
+R8
+31
+Z17 !s108 1723889892.000000
+Z18 !s107 /home/socv-2425-9/Desktop/p4-adder/p4_adder/tb/P4_wrap.sv|
+Z19 !s90 -reportprogress|300|-work|work|/home/socv-2425-9/Desktop/p4-adder/p4_adder/tb/P4_wrap.sv|
+!i113 0
+R11
+R12
+XP4_interface_sv_unit
+R1
+R2
+R3
+VEO5Z]SdK4FaRcTI2B79zE0
+r1
+!s85 0
+!i10b 1
+!s100 SBfW::>ndWd?fITDXiYGm3
+IEO5Z]SdK4FaRcTI2B79zE0
+!i103 1
+S1
+R0
+R5
+R6
+R7
+!i122 2
+R13
+R8
+31
+R9
+Z20 !s107 /home/socv-2425-9/Desktop/p4-adder/p4_adder/tb/P4_interface.sv|
+R10
+!i113 0
+R11
+R12
+n@p4_interface_sv_unit
+XP4_wrap_sv_unit
+R1
+R2
+R14
+VUbI1zS>lh7>>ce0_f:]KZ2
+r1
+!s85 0
+!i10b 1
+!s100 XBzTL;?hjh=VcY=RLaJd[3
+IUbI1zS>lh7>>ce0_f:]KZ2
+!i103 1
+S1
+R0
+R5
+R15
+R16
+!i122 1
+L0 4 0
+R8
+31
+R17
+R18
+R19
+!i113 0
+R11
+R12
+n@p4_wrap_sv_unit
