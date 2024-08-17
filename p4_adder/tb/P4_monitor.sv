@@ -5,9 +5,10 @@ import uvm_pkg::*;
 
 
 
+
 class P4_monitor extends uvm_monitor;
     `uvm_component_utils(P4_monitor);
-     uvm_analysis_port #(p4_adder_seq_item) ap;
+     uvm_analysis_port #(p4_sequence_item) ap;
      //interface to connect to the DUT
      virtual p4_adder_if pif;
      
@@ -27,10 +28,10 @@ class P4_monitor extends uvm_monitor;
 
      virtual task run_phase(uvm_phase phase);
         //sequence item
-        p4_adder_seq_item trans;
+        p4_sequence_item trans;
 
         forever begin
-            trans = p4_adder_seq_item::type_id::create("trans");
+            trans = p4_sequence_item::type_id::create("trans");
             //save the values from the dut in the sequence item
             trans.a=pif.a;
             trans.b=pif.b;
@@ -42,6 +43,6 @@ class P4_monitor extends uvm_monitor;
         end
      endtask
 
-     
+endclass 
 
             
