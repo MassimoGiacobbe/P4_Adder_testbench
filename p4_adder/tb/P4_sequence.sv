@@ -1,16 +1,16 @@
-
+//`include "P4_pkg.sv"
 `include "P4_sequence_item.sv"
 import uvm_pkg::*;
-//import p4_adder_pkg::*; // Importing package for nTrans
+//import p4_pkg::*; // Importing package for nTrans
 
-class p4_adder_sequence extends uvm_sequence #(p4_adder_seq_item);
+class p4_sequence extends uvm_sequence #(p4_sequence_item);
 
     // Constructor
     function new(string name = "P4_sequence");
         super.new(name);
     endfunction
 
-    `uvm_object_utils(p4_adder_sequence)  // Register with the factory
+    `uvm_object_utils(p4_sequence)  // Register with the factory
 
     virtual task body();
 
