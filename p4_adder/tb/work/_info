@@ -1,0 +1,77 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/socv-2425-9/Desktop/p4-adder/p4_adder/tb
+Xp4_adder_pkg
+Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z2 !s110 1723902702
+!i10b 1
+!s100 F]93S`T?f<0V;]GQV?`C00
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+I`k>PW1zR01PAoHH6YKDSH1
+S1
+R0
+w1723889134
+8P4_pkg.sv
+Z3 FP4_pkg.sv
+!i122 6
+L0 3 0
+V`k>PW1zR01PAoHH6YKDSH1
+Z4 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z5 !s108 1723902701.000000
+!s107 /eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|P4_pkg.sv|P4_sequence_item.sv|
+Z6 !s90 P4_sequence_item.sv|
+!i113 0
+Z7 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 tCvgOpt 0
+XP4_sequence_item_sv_unit
+R1
+DXx6 mtiUvm 7 uvm_pkg 0 22 lXjlbbgd2P7=0FIB1[zNj3
+DXx4 work 12 p4_adder_pkg 0 22 `k>PW1zR01PAoHH6YKDSH1
+R2
+VB@W1:`oX<ZJUmha3F;kSC1
+r1
+!s85 0
+!i10b 1
+!s100 QLN3L]4mXjUEUYQ[HE[eg0
+IB@W1:`oX<ZJUmha3F;kSC1
+!i103 1
+S1
+R0
+w1723902698
+8P4_sequence_item.sv
+FP4_sequence_item.sv
+R3
+F/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh
+F/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh
+F/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh
+F/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh
+F/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh
+F/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh
+F/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh
+F/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh
+F/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh
+F/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh
+F/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh
+F/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh
+!i122 6
+L0 2 0
+R4
+31
+R5
+Z9 !s107 /eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|P4_pkg.sv|P4_sequence_item.sv|
+R6
+!i113 0
+R7
+R8
+n@p4_sequence_item_sv_unit

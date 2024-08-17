@@ -1,6 +1,8 @@
-//`include "uvm.svh"
+`include "P4_pkg.sv"
 import uvm_pkg::*;
 import p4_adder_pkg::*; // Importing package for nbit
+`include "uvm_macros.svh"
+//`include "uvm.svh"
 
 class p4_adder_seq_item extends uvm_sequence_item;
     `uvm_object_utils(p4_adder_seq_item)
@@ -22,18 +24,18 @@ class p4_adder_seq_item extends uvm_sequence_item;
     endfunction
 
     // Constraints to increase the probability of corner cases
-    constraint corner_case {
-        //corner cases are 80% of cases
-        if ($urandom_range(0, 99) < 80) begin
-            a inside {32'h00000000, 32'hFFFFFFFF, 32'h00000001, 32'hFFFFFFFE}; 
-            b inside {32'h00000000, 32'hFFFFFFFF, 32'h00000001, 32'hFFFFFFFE};
-        end
-
+		constraint corner_case{
+		//80% of cases are corner cases
+		($urandom_range(0,99)<80) ->(
+			a inside{32'h00000000, 32'hFFFFFFFF, 32'h00000001, 32'hFFFFFFFE} &&
+			b inside{32'h00000000, 32'hFFFFFFFF, 32'h00000001, 32'hFFFFFFFE}
+									);		
+		}	
         // Bias for cin to be 1
+		constraint cin_one{
         //cin is 1 in 70% of cases
-        if ($urandom_range(0, 99) < 70) begin
-            cin == 1;
-        end
-    }
+        ($urandom_range(0, 99) < 70) ->(cin == 1);
+            		 }
+    
 
 endclass
