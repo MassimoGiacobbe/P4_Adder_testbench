@@ -1,5 +1,5 @@
 `include "P4_monitor.sv"
-import uvm_pkg::*;
+//import uvm_pkg::*;
 
 
 class p4_adder_scoreboard extends uvm_scoreboard;

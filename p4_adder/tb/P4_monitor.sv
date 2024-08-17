@@ -1,4 +1,3 @@
-
 `include "P4_sequence.sv"
 `include "P4_interface.sv"
 import uvm_pkg::*;
@@ -42,7 +41,8 @@ class P4_monitor extends uvm_monitor;
             ap.write(trans);
         end
      endtask
+endclass
 
-endclass 
+ 
 
             
