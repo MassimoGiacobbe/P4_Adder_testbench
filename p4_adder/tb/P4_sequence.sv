@@ -1,7 +1,8 @@
-//`include "P4_pkg.sv"
+`ifndef P4_sequence
+`define P4_sequence
+
 `include "P4_sequence_item.sv"
 import uvm_pkg::*;
-//import p4_pkg::*; // Importing package for nTrans
 
 class p4_sequence extends uvm_sequence #(p4_sequence_item);
 
@@ -41,3 +42,5 @@ class p4_sequence extends uvm_sequence #(p4_sequence_item);
     endtask
 
 endclass
+
+`endif

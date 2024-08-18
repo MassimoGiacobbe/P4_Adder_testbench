@@ -1,6 +1,8 @@
+`ifndef P4_AGENT
+`define	P4_AGENT
 
 import uvm_pkg::*;
-`include "P4_sequencer.sv"
+//`include "P4_sequencer.sv"
 `include "P4_driver.sv"
 `include "P4_monitor.sv"
 
@@ -54,3 +56,5 @@ class p4_adder_agent extends uvm_agent;
     endfunction
 
 endclass
+
+`endif

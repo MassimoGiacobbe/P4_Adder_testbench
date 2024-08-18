@@ -1,3 +1,6 @@
+`ifndef P4_SCOREBOARD
+`define	P4_SCOREBOARD
+
 `include "P4_monitor.sv"
 //import uvm_pkg::*;
 
@@ -38,3 +41,5 @@ class p4_adder_scoreboard extends uvm_scoreboard;
     endfunction
 
 endclass
+
+`endif

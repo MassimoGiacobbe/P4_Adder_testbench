@@ -1,3 +1,6 @@
+`ifndef P4_TOP
+`define	P4_TOP
+
 `include "P4_test.sv"
 `include "P4_interface.sv"
 `include "P4_wrap.sv"
@@ -35,3 +38,5 @@ module P4_top;
     end
 
 endmodule
+
+`endif

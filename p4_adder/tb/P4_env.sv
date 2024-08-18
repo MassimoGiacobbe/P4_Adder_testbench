@@ -1,3 +1,7 @@
+`ifndef P4_ENV
+`define	P4_ENV
+
+
 `include "P4_agent.sv"
 import uvm_pkg::*;
 
@@ -27,3 +31,5 @@ class P4_env extends uvm_env;
         endfunction
 
 endclass
+
+`endif

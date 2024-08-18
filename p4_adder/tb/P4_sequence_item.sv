@@ -1,3 +1,7 @@
+`ifndef P4_SEQUENCE_ITEM
+`define P4_SEQUENCE_ITEM
+
+
 `include "P4_pkg.sv"
 import uvm_pkg::*;
 import p4_adder_pkg::*; // Importing package for nbit
@@ -39,3 +43,5 @@ class p4_sequence_item extends uvm_sequence_item;
     
 
 endclass
+
+`endif

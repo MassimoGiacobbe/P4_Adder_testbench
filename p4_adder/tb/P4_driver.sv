@@ -1,5 +1,8 @@
+`ifndef P4_DRIVER
+`define P4_DRIVER
+
 `include "uvm_macros.svh"
-`include "P4_sequencer.sv"
+`include "P4_sequence_item.sv"
 import uvm_pkg::*;
 
 
@@ -26,3 +29,5 @@ class p4_driver extends uvm_driver #(p4_sequence_item);
     endtask
 
 endclass
+
+`endif

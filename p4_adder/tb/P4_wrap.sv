@@ -1,3 +1,5 @@
+`ifndef P4_WRAP
+`define P4_WRAP
 //wrapper to interface the VHDL design to the sv tb
 
 
@@ -24,3 +26,5 @@ module p4_adder_wrapper (
    );
 
 endmodule
+
+`endif

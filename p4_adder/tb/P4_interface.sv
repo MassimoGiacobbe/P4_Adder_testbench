@@ -1,4 +1,5 @@
-
+`ifndef P4_INTERFACE
+`define P4_INTERFACE
 // Import the package containing nbit and nbit_per_block values
 import p4_adder_pkg::*; 
 
@@ -22,3 +23,5 @@ interface p4_adder_if(input logic clk);
    modport slave (output a, b, cin, input s, cout);
 
 endinterface
+
+`endif

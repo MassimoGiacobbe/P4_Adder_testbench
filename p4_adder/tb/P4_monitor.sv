@@ -1,12 +1,12 @@
+`ifndef P4_MONITOR
+`define P4_MONITOR
+
 `include "P4_sequence.sv"
 `include "P4_interface.sv"
 import uvm_pkg::*;
 
-
-
-
-class P4_monitor extends uvm_monitor;
-    `uvm_component_utils(P4_monitor);
+class p4_monitor extends uvm_monitor;
+    `uvm_component_utils(p4_monitor);
      uvm_analysis_port #(p4_sequence_item) ap;
      //interface to connect to the DUT
      virtual p4_adder_if pif;
@@ -43,6 +43,4 @@ class P4_monitor extends uvm_monitor;
      endtask
 endclass
 
- 
-
-            
+`endif

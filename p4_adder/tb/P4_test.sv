@@ -1,3 +1,6 @@
+`ifndef P4_TEST
+`define	P4_TEST
+
 `include "P4_env.sv"
 import uvm_pkg::*;
 
@@ -37,3 +40,5 @@ class test1 extends uvm_test;
     endtask : run_phase
     
 endclass
+
+`endif
