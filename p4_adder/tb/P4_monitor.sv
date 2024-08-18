@@ -9,7 +9,7 @@ class p4_monitor extends uvm_monitor;
     `uvm_component_utils(p4_monitor);
      uvm_analysis_port #(p4_sequence_item) ap;
      //interface to connect to the DUT
-     virtual p4_adder_if pif;
+     virtual p4_adder_if vif;
      
     //constructor
      function new(string name, uvm_component parent);
@@ -20,7 +20,7 @@ class p4_monitor extends uvm_monitor;
         super.build_phase(phase);
 
         // Get the virtual interface from the configuration database
-        if (!uvm_config_db#(virtual p4_adder_if)::get(this, "", "pif", pif)) begin
+        if (!uvm_config_db#(virtual p4_adder_if)::get(this, "", "vif", vif)) begin
             `uvm_fatal("NOVIF", "Virtual interface not found")
         end
     endfunction

@@ -2,14 +2,14 @@
 `define	P4_AGENT
 
 import uvm_pkg::*;
-//`include "P4_sequencer.sv"
+`include "P4_sequencer.sv"
 `include "P4_driver.sv"
 `include "P4_monitor.sv"
 
 
 
-class p4_adder_agent extends uvm_agent;
-    `uvm_component_utils(p4_adder_agent)
+class p4_agent extends uvm_agent;
+    `uvm_component_utils(p4_agent)
 
     // Declare  the agent's components
     p4_sequencer seqr;
@@ -27,6 +27,7 @@ class p4_adder_agent extends uvm_agent;
     // Build phase
     function void build_phase(uvm_phase phase);
         super.build_phase(phase);
+
 
         if (!uvm_config_db#(bit)::get(this, "", "is_active", is_active))
             is_active = 1; // Default to active

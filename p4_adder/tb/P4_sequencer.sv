@@ -1,6 +1,6 @@
 //sequencer class, should arbitrate beetwen sequence and driver
 `ifndef P4_SEQUENCER
-'define P4_SEQUENCER
+`define P4_SEQUENCER
 
 `include "P4_sequence.sv"
 import uvm_pkg::*;

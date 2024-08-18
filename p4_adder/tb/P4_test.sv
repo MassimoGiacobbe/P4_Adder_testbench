@@ -8,7 +8,7 @@ class test1 extends uvm_test;
 
     `uvm_component_utils(test1)
     
-    P4_env env ;
+    P4_env env;
     
     
     function new (string name="test1", uvm_component parent=null);
@@ -19,10 +19,10 @@ class test1 extends uvm_test;
     endfunction : new
     
     virtual task run_phase(uvm_phase phase);
-        uvm_report_info(get_full_name(), "START of run_phase", UVM_LOW);
+        //uvm_report_info(get_full_name(), "START of run_phase", UVM_LOW);
 
-        p4_adder_sequence seq;
-        seq = p4_adder_sequence::type_id::create("seq");
+        p4_sequence seq;
+        seq = p4_sequence::type_id::create("seq");
 
         // Raise objection to keep the simulation running
         phase.raise_objection(this);

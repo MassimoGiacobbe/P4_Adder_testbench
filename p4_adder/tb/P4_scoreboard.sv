@@ -5,8 +5,8 @@
 //import uvm_pkg::*;
 
 
-class p4_adder_scoreboard extends uvm_scoreboard;
-    `uvm_component_utils(p4_adder_scoreboard)
+class p4_scoreboard extends uvm_scoreboard;
+    `uvm_component_utils(p4_scoreboard)
 
     // Declare an analysis export to receive transactions from the monitor
     uvm_analysis_export #(p4_sequence_item) analysis_export;
