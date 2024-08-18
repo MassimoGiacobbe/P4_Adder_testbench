@@ -1,0 +1,5 @@
+# Ignore all directories named 'work' anywhere in the repository
+work/
+
+# Ignore all files named 'transcript' anywhere in the repository
+transcript
