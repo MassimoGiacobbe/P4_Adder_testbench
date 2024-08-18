@@ -16,7 +16,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-vlog -f compile.f -mixedsvvh
+vlog -f compile_tb.f -mixedsvvh
 if [ $? -ne 0 ]; then
     echo "SystemVerilog compilation failed."
     exit 1
