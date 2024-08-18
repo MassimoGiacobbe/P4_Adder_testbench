@@ -4,7 +4,7 @@
 
 `include "P4_pkg.sv"
 import uvm_pkg::*;
-import p4_adder_pkg::*; // Importing package for nbit
+import p4_pkg::*; // Importing package for nbit
 `include "uvm_macros.svh"
 
 
@@ -30,7 +30,7 @@ class p4_sequence_item extends uvm_sequence_item;
     // Constraints to increase the probability of corner cases
 		constraint corner_case{
 		//80% of cases are corner cases
-		($urandom_range(0,99)<80) ->(
+		($random % 100 < 80 ) ->(
 			a inside{32'h00000000, 32'hFFFFFFFF, 32'h00000001, 32'hFFFFFFFE} &&
 			b inside{32'h00000000, 32'hFFFFFFFF, 32'h00000001, 32'hFFFFFFFE}
 									);		
@@ -38,7 +38,7 @@ class p4_sequence_item extends uvm_sequence_item;
         // Bias for cin to be 1
 		constraint cin_one{
         //cin is 1 in 70% of cases
-        ($urandom_range(0, 99) < 70) ->(cin == 1);
+        ($random % 100 < 70 ) ->(cin == 1);
             		 }
     
 

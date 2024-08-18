@@ -13,7 +13,7 @@ module P4_top;
     logic clk;
 
     // Instantiate the DUT interface
-    p4_adder_if dut_if (clk); //clk is used for timing purposes since the design is asynchronous
+    p4_if dut_if (clk); //clk is used for timing purposes since the design is asynchronous
 
     // Clock generation
     initial begin
@@ -22,17 +22,11 @@ module P4_top;
     end
 
     // Instantiate the SystemVerilog wrapper around the VHDL DUT
-    p4_adder_wrapper dut_wrapper (
-            .a    (dut_if.a),    // Connect interface signals to wrapper
-            .b    (dut_if.b),
-            .cin  (dut_if.cin),
-            .s    (dut_if.s),
-            .cout (dut_if.cout)
-    );
+    p4_wrap #(nbit,nbit_per_block) dut_wrapper (dut_if.port);
 
 
     initial begin
-        uvm_config_db#(virtual p4_adder_if)::set(null, "env.agent.*", "vif", dut_if);
+        uvm_config_db#(virtual p4_if)::set(null, "env.agent.*", "vif", dut_if);
         run_test("test1");    
 
     end
