@@ -23,7 +23,7 @@ if [ $? -ne 0 ]; then
 fi
 
 # If compilation succeeds, run the simulation
-vsim -c -do sim.do p4_adder.vhd
+vsim -c -do sim.do P4_top
 if [ $? -ne 0 ]; then
     echo "Simulation failed."
     exit 1
