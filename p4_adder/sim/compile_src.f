@@ -6,7 +6,7 @@
 ../src/group_G.vhd
 ../src/group_PG.vhd
 ../src/pg_network.vhd
-../src/sum_generator.vhd
 ../src/sparse_tree.vhd
+../src/sum_generator.vhd
 ../src/carry_generator.vhd
 ../src/p4_adder.vhd

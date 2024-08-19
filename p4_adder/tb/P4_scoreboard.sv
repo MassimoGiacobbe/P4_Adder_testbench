@@ -28,15 +28,15 @@ class p4_scoreboard extends uvm_scoreboard;
         logic expected_cout;
 
         // Calculate expected outputs based on inputs
-        {expected_cout, expected_s} = trans.a + trans.b + trans.cin;
+        {expected_cout, expected_s} = trans.i_seq.a + trans.i_seq.b + trans.i_seq.cin;
 
         // Compare actual outputs with expected outputs
         if (trans.s !== expected_s || trans.cout !== expected_cout) begin
             `uvm_error("MISMATCH", $sformatf("Mismatch detected! Inputs: a=%h, b=%h, cin=%b | Expected: s=%h, cout=%b | Got: s=%h, cout=%b",
-                                    trans.a, trans.b, trans.cin, expected_s, expected_cout, trans.s, trans.cout))
+                                    trans.i_seq.a, trans.i_seq.b, trans.i_seq.cin, expected_s, expected_cout, trans.s, trans.cout))
         end else begin
             `uvm_info("CHECK", $sformatf("Check passed! Inputs: a=%h, b=%h, cin=%b | Output: s=%h, cout=%b",
-                                    trans.a, trans.b, trans.cin, trans.s, trans.cout), UVM_LOW)
+                                    trans.i_seq.a, trans.i_seq.b, trans.i_seq.cin, trans.s, trans.cout), UVM_LOW)
         end
     endfunction
 

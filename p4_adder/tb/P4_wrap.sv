@@ -9,7 +9,7 @@ module p4_wrap #(nbit, nbit_per_block)(p4_if.port uvm_if);
    
    
    p4_adder #(nbit, nbit_per_block)
-p4_u(
+    p4_u(
     .a(uvm_if.a),
     .b(uvm_if.b),
     .cin(uvm_if.cin),

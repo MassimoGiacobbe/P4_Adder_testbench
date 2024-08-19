@@ -38,15 +38,13 @@ class p4_driver extends uvm_driver #(p4_sequence_item);
             seq_item_port.get_next_item(seq_item);
 
             // Drive the signals to the DUT using the interface
-            vif.a = seq_item.a;
-            vif.b = seq_item.b;
+            vif.a = seq_item.rand_in.a;
+            vif.b = seq_item.rand_in.b;
+            vif.cin=seq_item.rand_in.cin;
             vif.valid = 1'b1;
 
             // Wait for one clock cycle
             @(posedge vif.clk);
-
-            // Lower the valid signal after driving
-            vif.valid = 1'b0;
 
             // Complete the item
             seq_item_port.item_done();

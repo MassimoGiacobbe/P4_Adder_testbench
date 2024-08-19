@@ -11,11 +11,15 @@ import p4_pkg::*; // Importing package for nbit
 class p4_sequence_item extends uvm_sequence_item;
     `uvm_object_utils(p4_sequence_item)
 
-    // Random variables
-    rand logic [nbit-1:0] a;
-    rand logic [nbit-1:0] b;
-    rand logic cin;
-    
+    // input variables
+    typedef struct packed{
+        logic [nbit-1:0] a;
+        logic [nbit-1:0] b;
+        logic cin;      
+    } i_var;
+     i_var i_seq;
+     rand i_var rand_in;
+     
     //outputs to be collected
     logic [nbit-1:0] s;
     logic cout;
@@ -28,19 +32,30 @@ class p4_sequence_item extends uvm_sequence_item;
     endfunction
 
     // Constraints to increase the probability of corner cases
+    //10x more likely to be a corner case
 		constraint corner_case{
-		//80% of cases are corner cases
-		($random % 100 < 80 ) ->(
-			a inside{32'h00000000, 32'hFFFFFFFF, 32'h00000001, 32'hFFFFFFFE} &&
-			b inside{32'h00000000, 32'hFFFFFFFF, 32'h00000001, 32'hFFFFFFFE}
-									);		
-		}	
+        rand_in.a  dist {
+            0                 :=10, 
+            (1<<nbit)-1       :=10,
+            (1<<(nbit-1))-1   :=10, 
+            [1:(1<<nbit)-2]   :=1
+            };
+        rand_in.b  dist {
+                0                 :=10, 
+                (1<<nbit)-1       :=10,
+                (1<<(nbit-1))-1   :=10, 
+                [1:(1<<nbit)-2]   :=1
+                };
+            };
         // Bias for cin to be 1
+        //7x more likely to be 1
 		constraint cin_one{
-        //cin is 1 in 70% of cases
-        ($random % 100 < 70 ) ->(cin == 1);
-            		 }
-    
+            rand_in.a  dist {
+                0                   :=7, 
+                1                   :=1
+                };
+            };
+                    
 
 endclass
 

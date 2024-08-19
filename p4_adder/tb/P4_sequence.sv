@@ -37,7 +37,7 @@ class p4_sequence extends uvm_sequence #(p4_sequence_item);
 
             // print the sequence item values for debugging
             `uvm_info("P4_SEQ", $sformatf("Generated item: a = %h, b = %h, cin = %b", 
-                        seq_item.a, seq_item.b, seq_item.cin), UVM_MEDIUM)
+                        seq_item.rand_in.a, seq_item.rand_in.b, seq_item.rand_in.cin), UVM_MEDIUM)
         end
     endtask
 
