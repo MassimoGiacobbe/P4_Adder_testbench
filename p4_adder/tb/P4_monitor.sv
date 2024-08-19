@@ -23,6 +23,8 @@ class p4_monitor extends uvm_monitor;
         if (!uvm_config_db#(virtual p4_if)::get(this, "", "vif", vif)) begin
             `uvm_fatal("NOVIF", "Virtual interface not found")
         end
+
+        ap=new("ap",this);
     endfunction
 
      virtual task run_phase(uvm_phase phase);

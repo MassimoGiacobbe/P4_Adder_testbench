@@ -11,6 +11,7 @@ class P4_env extends uvm_env;
     // Declare the agent and scoreboard
     p4_agent agent;
     p4_scoreboard scoreboard;
+    
 
     // Constructor
     function new(string name, uvm_component parent = null);
@@ -40,7 +41,7 @@ class P4_env extends uvm_env;
 
         // Connect the monitor's analysis port to the scoreboard's analysis export
         if (agent.mon != null && scoreboard != null) begin
-            agent.mon.ap.connect(scoreboard.analysis_export);
+            agent.mon.ap.connect(scoreboard.ai);
         end
 
         uvm_report_info(get_full_name(), "END of connect_phase", UVM_LOW);

@@ -9,17 +9,20 @@ class p4_scoreboard extends uvm_scoreboard;
     `uvm_component_utils(p4_scoreboard)
 
     // Declare an analysis export to receive transactions from the monitor
-    uvm_analysis_export #(p4_sequence_item) analysis_export;
-
+    //uvm_analysis_export #(p4_sequence_item) analysis_export;
+    uvm_analysis_imp #(p4_sequence_item,p4_scoreboard) ai;
+   
     // Constructor
     function new(string name, uvm_component parent);
         super.new(name, parent);
-        analysis_export = new("analysis_export", this);
+     //   analysis_imp = new("analysis_imp", this);
     endfunction
 
     
     function void build_phase(uvm_phase phase);
         super.build_phase(phase);
+
+        ai = new("ai", this);
     endfunction
 
     
