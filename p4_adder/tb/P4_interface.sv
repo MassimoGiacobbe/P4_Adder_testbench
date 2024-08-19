@@ -14,11 +14,11 @@ interface p4_if(input logic clk);
    // Clocking block for timing control
    clocking cb @(posedge clk);
        input a, b, cin;
-       output s, cout;
+       input s, cout;
    endclocking
 
    // Modport definitions 
-   modport port(input a, b, cin, output s, cout);
+   modport port(input a, b, cin, input s, cout);
   
 
 endinterface
