@@ -15,13 +15,15 @@ class p4_scoreboard extends uvm_scoreboard;
     // Constructor
     function new(string name, uvm_component parent);
         super.new(name, parent);
-     //   analysis_imp = new("analysis_imp", this);
+    endfunction
+
+    function void write(p4_sequence_item T);
+        ai.write();
     endfunction
 
     
     function void build_phase(uvm_phase phase);
         super.build_phase(phase);
-
         ai = new("ai", this);
     endfunction
 

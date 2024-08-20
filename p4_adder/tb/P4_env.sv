@@ -22,7 +22,7 @@ class P4_env extends uvm_env;
     function void build_phase(uvm_phase phase);
         super.build_phase(phase);
         
-        uvm_report_info(get_full_name(), "START of build_phase", UVM_LOW);
+        uvm_report_info(get_full_name(), "START of env build_phase", UVM_LOW);
 
         // Instantiate the agent
         agent = p4_agent::type_id::create("agent", this);
@@ -30,7 +30,7 @@ class P4_env extends uvm_env;
         // Instantiate the scoreboard
         scoreboard = p4_scoreboard::type_id::create("scoreboard", this);
 
-        uvm_report_info(get_full_name(), "END of build_phase", UVM_LOW);
+        uvm_report_info(get_full_name(), "END of env build_phase", UVM_LOW);
     endfunction: build_phase
 
     // Connect phase

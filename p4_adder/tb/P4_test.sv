@@ -4,22 +4,28 @@
 `include "P4_env.sv"
 import uvm_pkg::*;
 
-class test1 extends uvm_test;
+class p4_test extends uvm_test;
 
-    `uvm_component_utils(test1)
+    `uvm_component_utils(p4_test)
     
     P4_env env;
     
     
-    function new (string name="test1", uvm_component parent=null);
+    function new (string name="p4_test", uvm_component parent=null);
         super.new (name, parent);
         //i see online that is is not recommended to instantiate here the enviroment, but a build phase should be written, i'll leave it like this for the time being
         //since i am following testbench.in
-        env = new("t_env",this);
+        //env = new("t_env",this);     
     endfunction : new
     
+    function void build_phase(uvm_phase phase);
+        super.build_phase(phase);
+        env = P4_env::type_id::create("env", this);
+    endfunction : build_phase
+    
+
     virtual task run_phase(uvm_phase phase);
-        //uvm_report_info(get_full_name(), "START of run_phase", UVM_LOW);
+        uvm_report_info(get_full_name(), "START of run_phase", UVM_LOW);
 
         p4_sequence seq;
         seq = p4_sequence::type_id::create("seq");

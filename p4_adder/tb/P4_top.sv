@@ -27,7 +27,8 @@ import uvm_pkg::*;
 
         initial begin
             uvm_config_db#(virtual p4_if)::set(null, "*", "vif", dut_if);
-            run_test("test1");    
+            //run P4_test
+            run_test("p4_test");    
 
         end
 
