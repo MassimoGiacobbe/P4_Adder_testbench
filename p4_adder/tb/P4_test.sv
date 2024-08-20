@@ -25,10 +25,17 @@ class p4_test extends uvm_test;
     
 
     virtual task run_phase(uvm_phase phase);
-        uvm_report_info(get_full_name(), "START of run_phase", UVM_LOW);
+        
 
         p4_sequence seq;
+        uvm_report_info(get_full_name(), "START of run_phase", UVM_LOW);
+        
         seq = p4_sequence::type_id::create("seq");
+        
+        if (!seq) begin
+            `uvm_fatal("SEQ_NULL", "Failed to create sequence")
+        end
+        
 
         // Raise objection to keep the simulation running
         phase.raise_objection(this);
@@ -37,7 +44,7 @@ class p4_test extends uvm_test;
         seq.start(env.agent.seqr);
 
         // Simulate for some time or wait for conditions, then drop the objection
-        #1000ns; 
+        #10ns; 
 
         // Drop objection to allow simulation to end
         phase.drop_objection(this);
