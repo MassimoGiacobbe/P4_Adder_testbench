@@ -42,6 +42,8 @@ class p4_test extends uvm_test;
 
         // Start the sequence on the agent's sequencer
         seq.start(env.agent.seqr);
+        uvm_report_info("SEQ_START", "Starting p4_sequence", UVM_HIGH);
+
 
         // Simulate for some time or wait for conditions, then drop the objection
         #10ns; 

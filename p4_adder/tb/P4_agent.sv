@@ -34,6 +34,7 @@ class p4_agent extends uvm_agent;
 
         // Instantiate components based on the agent's mode
         if (is_active) begin
+            uvm_report_info(get_full_name(), "building sequencer and driver", UVM_LOW);
             seqr = p4_sequencer::type_id::create("seqr", this);
             drv = p4_driver::type_id::create("drv", this);
         end

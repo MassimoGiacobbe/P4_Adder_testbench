@@ -19,7 +19,7 @@ class p4_scoreboard extends uvm_scoreboard;
 
     function void write(p4_sequence_item T);
         //ai.write();
-        compare(T);
+        compare(T); 
     endfunction
 
     

@@ -24,6 +24,11 @@ class p4_sequence extends uvm_sequence #(p4_sequence_item);
             // Create a new sequence item
             seq_item = p4_sequence_item::type_id::create("seq_item");
 
+             // Check if seq_item is created
+            if (!seq_item) begin
+                `uvm_fatal("SEQ_ITEM_NULL", "Failed to create seq_item")
+            end
+
             // Randomize the sequence item with constraints applied
             if (!seq_item.randomize()) begin
                 `uvm_error("RANDOMIZE_FAILED", "Failed to randomize seq_item")
