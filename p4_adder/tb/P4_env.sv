@@ -41,7 +41,7 @@ class P4_env extends uvm_env;
 
         // Connect the monitor's analysis port to the scoreboard's analysis export
      
-        if (agent.mon != null && scoreboard != null) begin
+       if (agent.mon != null && scoreboard != null) begin
             agent.mon.ap.connect(scoreboard.ai);
         end
     

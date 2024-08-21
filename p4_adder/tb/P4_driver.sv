@@ -42,7 +42,8 @@ class p4_driver extends uvm_driver #(p4_sequence_item);
             vif.b = seq_item.rand_in.b;
             vif.cin=seq_item.rand_in.cin;
             
-
+            //small delay to ensure the driven data has time to be captured at the output
+            #1ns;
             // Wait for one clock cycle
             @(posedge vif.clk);
 

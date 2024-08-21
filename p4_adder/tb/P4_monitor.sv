@@ -32,6 +32,7 @@ class p4_monitor extends uvm_monitor;
         p4_sequence_item trans;
 
         forever begin
+            @(posedge vif.clk);
             trans = p4_sequence_item::type_id::create("trans");
             //save the values from the dut in the sequence item
             trans.i_seq.a=vif.a;
