@@ -32,6 +32,8 @@ class p4_monitor extends uvm_monitor;
         p4_sequence_item trans;
 
         forever begin
+            //added 1 ns delay to make sure the values are checked after they are driven and not simultanously
+            #1ns;
             @(posedge vif.clk);
             trans = p4_sequence_item::type_id::create("trans");
             //save the values from the dut in the sequence item

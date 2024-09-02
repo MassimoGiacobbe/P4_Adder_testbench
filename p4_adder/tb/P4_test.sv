@@ -13,9 +13,6 @@ class p4_test extends uvm_test;
     
     function new (string name="p4_test", uvm_component parent=null);
         super.new (name, parent);
-        //i see online that is is not recommended to instantiate here the enviroment, but a build phase should be written, i'll leave it like this for the time being
-        //since i am following testbench.in
-        //env = new("t_env",this);     
     endfunction : new
     
     function void build_phase(uvm_phase phase);

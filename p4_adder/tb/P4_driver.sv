@@ -34,19 +34,17 @@ class p4_driver extends uvm_driver #(p4_sequence_item);
     // Task to drive signals to the DUT
     task run();
         forever begin
+            
             // Get the next transaction
             seq_item_port.get_next_item(seq_item);
-
             // Drive the signals to the DUT using the interface
             vif.a = seq_item.rand_in.a;
             vif.b = seq_item.rand_in.b;
             vif.cin=seq_item.rand_in.cin;
-            
-            //small delay to ensure the driven data has time to be captured at the output
-            #1ns;
-            // Wait for one clock cycle
+            //reporting for debiugging purposes
+            `uvm_info("DRIVER", $sformatf("driving signals  a=%h, b=%h, cin=%b", vif.a,vif.b,vif.cin), UVM_LOW)
+            // Wait for one clock cycle to drive new signals
             @(posedge vif.clk);
-
             // Complete the item
             seq_item_port.item_done();
         end

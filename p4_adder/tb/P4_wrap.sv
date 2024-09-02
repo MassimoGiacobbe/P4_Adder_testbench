@@ -14,9 +14,22 @@ module p4_wrap #(nbit, nbit_per_block)(p4_if.port uvm_if);
     .b(uvm_if.b),
     .cin(uvm_if.cin),
     .s(uvm_if.s),
-    .cout(uvm_if.cout)
-   
+    .cout(uvm_if.cout)    
 );
+
+
+
+// Property to check data propagation
+
+property check_data_propagation;
+    @(posedge uvm_if.clk)
+    (uvm_if.a == p4_u.a) && (uvm_if.b == p4_u.b) && (uvm_if.cin == p4_u.cin);
+endproperty
+
+// Assert the property
+assert property (check_data_propagation)
+    else $error("Data mismatch: Inputs to DUT do not match those from the interface.");
+
 
 endmodule
 
