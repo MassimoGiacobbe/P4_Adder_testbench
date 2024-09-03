@@ -42,6 +42,8 @@ class p4_monitor extends uvm_monitor;
             trans.i_seq.cin=vif.cin;
             trans.s=vif.s;
             trans.cout=vif.cout;
+            //reporting for debugging purposes
+            `uvm_info("MONITOR", $sformatf("Captured: s=%h, cout=%b", trans.s, trans.cout), UVM_LOW)
             //send the saved data through the analysis port
             ap.write(trans);
         end
