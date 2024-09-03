@@ -8,8 +8,7 @@
 class p4_scoreboard extends uvm_scoreboard;
     `uvm_component_utils(p4_scoreboard)
 
-    // Declare an analysis export to receive transactions from the monitor
-    //uvm_analysis_export #(p4_sequence_item) analysis_export;
+    // Declare an analysis import to receive transactions from the monitor
     uvm_analysis_imp #(p4_sequence_item,p4_scoreboard) ai;
    
     // Constructor

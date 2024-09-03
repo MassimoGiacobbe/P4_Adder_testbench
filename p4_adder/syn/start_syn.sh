@@ -58,7 +58,7 @@ foreach file [list ${FILES[@]}] {
 }
 
 # Elaborate the design
-elaborate \TOP_LEVEL -architecture  structural -library WORK_DIR
+elaborate /$top -architecture  structural -library WORK_DIR
 
 # Perform synthesis
 compile -exact_map

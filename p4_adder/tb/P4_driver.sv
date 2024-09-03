@@ -1,9 +1,9 @@
 `ifndef P4_DRIVER
 `define P4_DRIVER
 
-`include "uvm_macros.svh"
+
 `include "P4_sequence_item.sv"
-import uvm_pkg::*;
+
 
 // Driver class
 // Driver takes sequences and feeds them to the DUT 

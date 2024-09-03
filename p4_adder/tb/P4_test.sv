@@ -2,7 +2,7 @@
 `define	P4_TEST
 
 `include "P4_env.sv"
-import uvm_pkg::*;
+
 
 class p4_test extends uvm_test;
 

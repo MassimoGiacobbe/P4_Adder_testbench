@@ -3,7 +3,7 @@
 
 `include "P4_sequence.sv"
 `include "P4_interface.sv"
-import uvm_pkg::*;
+
 
 class p4_monitor extends uvm_monitor;
     `uvm_component_utils(p4_monitor);

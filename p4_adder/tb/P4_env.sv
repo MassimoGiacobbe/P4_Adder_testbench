@@ -3,7 +3,6 @@
 
 `include "P4_agent.sv"
 `include "P4_scoreboard.sv"
-import uvm_pkg::*;
 
 class P4_env extends uvm_env;
     `uvm_component_utils(P4_env)

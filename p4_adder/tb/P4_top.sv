@@ -2,9 +2,7 @@
 `define	P4_TOP
 
 `include "P4_test.sv"
-`include "P4_interface.sv"
 `include "P4_wrap.sv"
-import uvm_pkg::*;
 
 
     module P4_top;

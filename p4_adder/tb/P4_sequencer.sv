@@ -3,7 +3,7 @@
 `define P4_SEQUENCER
 
 `include "P4_sequence.sv"
-import uvm_pkg::*;
+
 
 class p4_sequencer extends uvm_sequencer #(p4_sequence_item); 
 
