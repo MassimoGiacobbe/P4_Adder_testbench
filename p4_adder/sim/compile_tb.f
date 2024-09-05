@@ -6,6 +6,7 @@
 ../tb/P4_monitor.sv
 ../tb/P4_scoreboard.sv
 ../tb/P4_agent.sv
+../tb/P4_cov.sv
 ../tb/P4_env.sv
 ../tb/P4_test.sv
 ../tb/P4_top.sv
