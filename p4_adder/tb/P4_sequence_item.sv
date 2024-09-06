@@ -2,7 +2,7 @@
 `define P4_SEQUENCE_ITEM
 
 
-`include "P4_pkg.sv"
+//`include "P4_pkg.sv"
 import uvm_pkg::*;
 import p4_pkg::*; // Importing package for nbit
 `include "uvm_macros.svh"
@@ -50,7 +50,7 @@ class p4_sequence_item extends uvm_sequence_item;
         // Bias for cin to be 1
         //7x more likely to be 1
 		constraint cin_one{
-            rand_in.a  dist {
+            rand_in.cin  dist {
                 0                   :=7, 
                 1                   :=1
                 };

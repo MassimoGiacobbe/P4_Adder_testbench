@@ -3,14 +3,14 @@
 
 `include "P4_agent.sv"
 `include "P4_scoreboard.sv"
-
+`include "P4_cov.sv"
 class P4_env extends uvm_env;
     `uvm_component_utils(P4_env)
 
     // Declare the agent and scoreboard
     p4_agent agent;
     p4_scoreboard scoreboard;
-    
+    p4_coverage cov;
 
     // Constructor
     function new(string name, uvm_component parent = null);
@@ -27,7 +27,10 @@ class P4_env extends uvm_env;
         agent = p4_agent::type_id::create("agent", this);
 
         // Instantiate the scoreboard
-         scoreboard = p4_scoreboard::type_id::create("scoreboard", this);
+        scoreboard = p4_scoreboard::type_id::create("scoreboard", this);
+        
+        // Instantiate the coverage subscriber
+        cov = p4_coverage::type_id::create("cov", this);
 
         uvm_report_info(get_full_name(), "END of env build_phase", UVM_LOW);
     endfunction: build_phase
@@ -44,9 +47,24 @@ class P4_env extends uvm_env;
             agent.mon.ap.connect(scoreboard.ai);
         end
     
+        //connect the monitor analysis port to the coverage subscriber
+
+        //agent.mon.ap.connect(cov.analysis_export);
+
         uvm_report_info(get_full_name(), "END of connect_phase", UVM_LOW);
     endfunction: connect_phase
 
+
+    
+    
+    // Report phase to print coverage data
+    function void report_phase(uvm_phase phase);
+        super.report_phase(phase);
+
+        // Print the coverage report
+        `uvm_info("COVERAGE", "Printing coverage data...", UVM_LOW)
+    endfunction 
+    
 endclass
 
 `endif
